@@ -62,7 +62,7 @@ The Project Manager / Product Owner (PM/PO) will serve as the primary interface 
 
 ### 2.4 Project Responsibilities
 
-| Role | Name | Responsibilities |
+| Role | Name (NetID) | Responsibilities |
 | ---- | ---- | ---------------- |
 | PM/PO| Duy Pham (ldp210003) | Defines project vision, manages backlog, leads meetings, removes impediments. |
 | Vision & Nav Lead | Victor Sim (vas230001) | Leads camera and LLM integration, oversees navigation algorithm. |
