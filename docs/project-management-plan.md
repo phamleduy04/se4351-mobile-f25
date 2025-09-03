@@ -1,6 +1,6 @@
 # Software Project Management Plan: Everywhere Locator
 
-Version: 1.0
+Version: 1.1
 
 Date: September 2, 2025
 
@@ -47,7 +47,7 @@ This SPMP is a living document. It will be updated throughout the project lifecy
 
 ## 2. Project Organization
 ### 2.1 Process Model
-This project will follow the Agile/Scrum methodology with short, one-week sprints. This model was chosen to facilitate rapid development and allow for iterative feedback, which is crucial for building a successful MVP. The team will hold a weekly progress meeting to review the previous sprint's work and plan for the next one.
+This project will follow a two-phase model aligned with the academic deadlines. Each phase will be treated as a one-week sprint within an Agile framework. This allows for a focused effort on requirements and design in the first week, followed by a focused development sprint in the second week. The team will hold a weekly progress meeting to review progress and plan for the next phase.
 
 ### 2.2 Organizational Structure
 
@@ -78,7 +78,10 @@ The Project Manager / Product Owner (PM/PO) will serve as the primary interface 
 ## 3. Managerial Process
 ### 3.1 Management Objectives and Priorities
 
-The single most important priority is delivering a functional **MVP working quickly**. The project's success will be measured by its ability to perform the core loop: accept a voice command, identify a common object, and provide basic guidance within the 4-week timeframe. Features beyond this core functionality are considered out of scope for the initial delivery.
+The project's priorities are phased:
+
+- Phase 1 Priority: To produce a clear, well-defined set of requirements and a visual design (mock-up) that accurately captures the project's goals and user scenarios.
+- Phase 2 Priority: To develop a functional running prototype (MVP) that successfully implements the core features defined in Phase 1.
 
 ### 3.2 Assumptions, Dependencies, and Constraints
 - Assumptions:
@@ -134,30 +137,69 @@ The single most important priority is delivering a functional **MVP working quic
 ## 5. Work Elements, Schedule, and Budget
 
 ### Work Elements and Schedule
-The project is divided into four one-week sprints.
+The project is divided into two distinct one-week phases, each with a major submission deadline.
+
+Phase 1: Requirements & Design (Interim Project I)
+
+- Timeline: Sep 2, 2025 – October 2, 2025
+
+- Goal: To define the project's scope, requirements, and user experience through detailed analysis, scenario modeling, and design mockups.
+
+- Key Activities:
+	- Analyze "AS-IS" scenarios for visually impaired individuals navigating indoors.
+
+	- Develop "TO-BE" scenarios illustrating how the Everywhere Locator app will improve this experience.
+
+	- Create UI/UX mockups and wireframes for the application flow (the "mock-up prototype").
+
+	- Draft the preliminary Workshop Requirements Specification (WRS) document.
+
+	- Develop Questionnaire I to validate assumptions and gather feedback on the proposed solution.
+
+	- Prepare the Interim Project I presentation slides.
 
 
--  Week 1 (Sept 4 - Sept 10): Sprint 1 - Foundation & UI Shell
-	- Goal: Establish the project foundation and basic user interface.
+- Deliverables (Due Thursday, Oct. 2 at 11:59 p.m.):
+	- Interim Project I Presentation (PPT)
 
-	- Tasks: Initialize React Native project, set up navigation, create the main screen UI, implement the voice input button, and capture raw voice data.
+	- Preliminary Workshop Requirements Specification (WRS) Document
 
--  Week 2 (Sept 11 - Sept 17): Sprint 2 - Vision Integration
-	- Goal: Connect the camera feed to the LLM.
+	- Questionnaire I
 
-	- Tasks: Integrate the device camera view into the app, establish a secure connection to the LLM API, send camera frames for analysis, and receive object identification data.
+	- Evolving Project Plan (this document)
+
+Phase 2: Prototyping & Validation (Final Project I)
+
+- Timeline: Friday, October 3 – Thursday, October 9, 2025
+
+- Goal: To develop a functional, running prototype based on the requirements from Phase 1 and to establish formal traceability.
+
+- Key Activities:
+	- Implement the core UI in React Native based on the Phase 1 mockups.
+
+	- Develop the "running prototype" by integrating the camera, voice input, and a basic LLM connection for object recognition.
+
+	- Finalize the WRS document with any learnings from the prototyping process.
+
+	- Create the Compact and Full Forward Traceability matrices, linking requirements from the WRS to specific components in the prototype.
+
+	- Calculate the requirements creeping rate.
+
+	- Update the Project Plan and presentation with final progress.
 
 
--  Week 3 (Sept 18 - Sept 24): Sprint 3 - Navigation Logic & Feedback
-	- Goal: Translate LLM data into useful user guidance.
+- Deliverables (Due Thursday, Oct. 9 at 11:59 p.m.):
+	- Final WRS Document
 
-	- Tasks: Develop the core logic to determine an object's relative position (e.g., left, right, center). Implement the text-to-voice system to provide clear, concise audio feedback.
+	- Compact-Forward-Traceability Matrix
 
+	- Full-Forward-Traceability Matrix
 
--  Week 4 (Sept 25 - Oct 2): Sprint 4 - Testing, Polish & Delivery
-	- Goal: Refine the MVP and prepare all deliverables.
+	- Final Questionnaire
 
-	- Tasks: Conduct thorough internal testing, fix critical bugs, write the user and build documentation, and prepare the final project presentation.
+	- Updated Presentation (PPT), if any changes were made
+
+	- Final evolving Project Plan
 
 ### Budget
 
