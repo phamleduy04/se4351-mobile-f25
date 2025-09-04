@@ -1,13 +1,15 @@
 # Software Project Management Plan: Everywhere Locator
 
-Version: 1.1
+Version: 1.2
 
 Date: September 2, 2025
 
 ## 1. Introduction
 ### 1.1 Project Overview
 
-Everywhere Locator is a mobile application designed to assist visually impaired individuals with indoor navigation. The project's primary goal is to create a functional application that empowers users to identify and locate common indoor objects using their smartphone's camera. The user will state their desired object via voice command, the application will use the camera and a Large Language Model (LLM) for object recognition, and it will provide audio feedback to guide the user.
+[Everywhere Locator](https://everywhere-locator.vercel.app) is a mobile application designed to assist visually impaired individuals with indoor navigation. The project's primary goal is to create a functional application that empowers users to identify and locate common indoor objects using their smartphone's camera. The user will state their desired object via voice command, the application will use the camera and a Large Language Model (LLM) for object recognition, and it will provide audio feedback to guide the user.
+
+Website URL: https://everywhere-locator.vercel.app
 
 ### 1.2 Project Deliverables
 Upon completion, the project team will deliver the following:
