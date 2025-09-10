@@ -1,4 +1,8 @@
-import { Text, View } from 'react-native';
+import { Box } from '@/components/ui/box';
+import { VStack } from '@/components/ui/vstack';
+import { Text } from '@/components/ui/text';
+import { Heading } from '@/components/ui/heading';
+import { Center } from '@/components/ui/center';
 
 import { EditScreenInfo } from './EditScreenInfo';
 
@@ -10,16 +14,13 @@ type ScreenContentProps = {
 
 export const ScreenContent = ({ title, path, children }: ScreenContentProps) => {
   return (
-    <View className={styles.container}>
-      <Text className={styles.title}>{title}</Text>
-      <View className={styles.separator} />
-      <EditScreenInfo path={path} />
-      {children}
-    </View>
+    <Center className="flex-1">
+      <VStack space="lg" className="items-center">
+        <Heading size="xl">{title}</Heading>
+        <Box className="h-[1px] w-4/5 bg-gray-200 my-7" />
+        <EditScreenInfo path={path} />
+        {children}
+      </VStack>
+    </Center>
   );
-};
-const styles = {
-  container: `items-center flex-1 justify-center`,
-  separator: `h-[1px] my-7 w-4/5 bg-gray-200`,
-  title: `text-xl font-bold`,
 };
