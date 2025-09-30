@@ -21,6 +21,7 @@
 | Version | Date         | Author               | Changes       |
 | ------- | ------------ | -------------------- | ------------- |
 | 1.0     | Sep 16, 2025 | Duy Pham (ldp210003) | Initial Draft |
+| 1.1     | Sep 30, 2025 | Duy Pham (ldp210003) | Small edit    |
 
 ## Process
 
@@ -30,7 +31,7 @@
 - **Core Experience Lead:** Chase Uherek
 - **Developers (Core Experience):** Nathan Boyle, Viet-Long Nguyen, Alberto Escobar
 - **Developers (Vision & Nav):** Kim Chau, Shreyaa Arun, Onkar Sandhu
-- **QA/Testing:** Kutsal Aksu (koa220001)
+- **QA/Testing:** Kutsal Aksu
 
 ### Meetings
 The team conducts a weekly progress meeting to review the task board and plan for the next phase.
@@ -39,7 +40,7 @@ The team conducts a weekly progress meeting to review the task board and plan fo
 - **Platform:** React Native
 - **Version Control:** Git / GitHub
 - **Object Recognition:** Google Gemini API (or similar LLM)
-- **Project Management:** Linear
+- **Project Management:** Github Projects
 - **Communication:** Discord
 
 
