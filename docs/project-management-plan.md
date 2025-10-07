@@ -1,13 +1,13 @@
 # Software Project Management Plan: Everywhere Locator
 
-Version: 1.2
+Version: 1.3
 
-Date: September 2, 2025
+Date: October 7, 2025
 
 ## 1. Introduction
 ### 1.1 Project Overview
 
-[Everywhere Locator](https://everywhere-locator.vercel.app) is a mobile application designed to assist visually impaired individuals with indoor navigation. The project's primary goal is to create a functional application that empowers users to identify and locate common indoor objects using their smartphone's camera. The user will state their desired object via voice command, the application will use the camera and a Large Language Model (LLM) for object recognition, and it will provide audio feedback to guide the user.
+[Everywhere Locator](https://everywhere-locator.vercel.app) is a mobile application designed to assist visually impaired individuals with indoor navigation and orientation. The project's primary goal is to create a functional application that empowers users to navigate complex indoor environments (buildings, campuses, and event venues) using their smartphone's camera and advanced computer vision technology. The application provides real-time audio feedback about the user's surroundings, including directional guidance ("you're getting warmer/colder"), obstacle detection, and landmark identification to help users reach their desired destinations safely and independently.
 
 Website URL: https://everywhere-locator.vercel.app
 
@@ -55,9 +55,9 @@ This project will follow a two-phase model aligned with the academic deadlines. 
 
 The 10-person team will be divided into two functional sub-teams to streamline development:
 
-- Core Experience Team (5 members): Focuses on the user interface, voice command processing (voice-to-text), and audio feedback (text-to-voice).
+- User Interface & Experience Team (5 members): Focuses on the user interface, voice command processing, audio feedback systems, and user interaction design for optimal accessibility.
 
-- Vision & Navigation Team (5 members): Focuses on camera integration, LLM API calls, and the core object recognition and guidance logic.
+- Navigation & Vision Team (5 members): Focuses on camera integration, LLM API calls, directional guidance algorithms ("warmer/colder" functionality), and core navigation logic.
 
 ### 2.3 Organizational Boundaries and Interfaces
 The Project Manager / Product Owner (PM/PO) will serve as the primary interface between the two teams, ensuring alignment on goals and priorities. However, direct communication between developers on both teams is encouraged to resolve technical dependencies quickly.
@@ -67,14 +67,14 @@ The Project Manager / Product Owner (PM/PO) will serve as the primary interface 
 | Role | Name (NetID) | Responsibilities |
 | ---- | ---- | ---------------- |
 | PM/PO| Duy Pham (ldp210003) | Defines project vision, manages backlog, leads meetings, removes impediments. |
-| Vision & Nav Lead | Victor Sim (vas230001) | Leads camera and LLM integration, oversees navigation algorithm. |
-| Core Experience Lead | Chase Uherek (cxu230001) | Leads UI/UX development, ensures accessibility standards are met. |
-| Developer | Nathan Boyle (nmb210005) | Core Experience Team - UI/UX implementation. |
-| Developer | Viet-Long Nguyen (vhn200002) | Core Experience Team - Voice processing. |
-| Developer | Alberto Escobar (axe220010) | Core Experience Team - Audio feedback system. |
-| Developer | Kim Chau (kxc220015) | Vision & Nav Team - Camera API integration. |
-| Developer | Shreyaa Arun (sxa220019) | Vision & Nav Team - LLM API integration. |
-| Developer | Onkar Sandhu (oss210000) | Vision & Nav Team - Navigation logic. |
+| Navigation & Vision Lead | Victor Sim (vas230001) | Leads camera and LLM integration, oversees directional guidance algorithms. |
+| UI/UX Lead | Chase Uherek (cxu230001) | Leads user interface development, ensures accessibility standards are met. |
+| Developer | Nathan Boyle (nmb210005) | UI/UX Team - Interface design and user interaction. |
+| Developer | Viet-Long Nguyen (vhn200002) | UI/UX Team - Voice command processing and audio feedback. |
+| Developer | Alberto Escobar (axe220010) | UI/UX Team - Accessibility features and user experience. |
+| Developer | Kim Chau (kxc220015) | Navigation & Vision Team - Camera API integration. |
+| Developer | Shreyaa Arun (sxa220019) | Navigation & Vision Team - LLM API integration. |
+| Developer | Onkar Sandhu (oss210000) | Navigation & Vision Team - Navigation logic and directional guidance. |
 | QA / Testing | Kutsal Aksu (koa220001) | Responsible for testing across both teams, manages bug reports.|
 
 ## 3. Managerial Process
@@ -105,10 +105,11 @@ The project's priorities are phased:
 
 | Risk ID | Risk Description | Probability | Impact | Mitigation Strategy |
 |---------|-----------------|-------------|--------|---------------------|
-| R-01 | Technical: The LLM's object recognition is inaccurate or too slow for real-time navigation. | Medium | High | Focus the MVP on a limited set of 5-10 common, easily distinguishable objects (e.g., "door", "chair", "table"). Implement clear audio cues for when an object cannot be identified. |
-| R-02 | User Experience: Voice commands are not interpreted correctly or the audio feedback is confusing. | Medium | High | Design a simple, structured command syntax (e.g., "Find the <object>"). Conduct early and frequent testing with team members to refine the audio cues. |
-| R-03 | Safety: The app provides incorrect guidance, potentially leading a user into an obstacle. | Low | Critical | The app will include a mandatory disclaimer and onboarding message stating it is an assistive aid and not a replacement for a cane or other primary navigation tools. Guidance will be suggestive (e.g., "The door appears to be to your left") rather than prescriptive. |
-| R-04 | Project: The 4-week timeline is too aggressive, leading to burnout or an incomplete product. | High | Medium | The PM/PO will strictly enforce the MVP scope. Any non-essential features will be moved to a post-launch backlog. |
+| R-01 | Technical: The directional guidance ("warmer/colder") is inaccurate or too slow for real-time navigation. | Medium | High | Implement robust computer vision algorithms with distance calculation. Focus on high-contrast landmarks and clear environmental features. Add calibration routine for different lighting conditions. |
+| R-02 | User Experience: Audio feedback is overwhelming or confusing during navigation. | Medium | High | Design clear, concise audio cues with adjustable frequency. Implement progressive disclosure of information and user-configurable detail levels. Conduct testing with visually impaired users. |
+| R-03 | Safety: The app provides incorrect navigation guidance, potentially leading a user into danger. | Low | Critical | The app will include mandatory disclaimer stating it's an assistive aid, not replacement for cane or guide dog. Implement obstacle detection alerts and safety boundaries. Use conservative guidance with safety margins. |
+| R-04 | Technical: Camera performance varies significantly in different indoor lighting conditions. | Medium | High | Implement adaptive exposure and contrast enhancement. Add manual override options. Test across various indoor environments (offices, hallways, large rooms). |
+| R-05 | Project: The 4-week timeline is too aggressive, leading to burnout or an incomplete product. | High | Medium | The PM/PO will strictly enforce the MVP scope. Prioritize core navigation functionality over advanced features. Any non-essential features moved to post-launch backlog. |
 
 ### 3.4 Monitoring and Controlling Mechanisms
 - Task Tracking: All work will be tracked as tickets in [Linear](https://linear.app/). The board will be reviewed during the weekly progress meetings.
@@ -122,7 +123,7 @@ The project's priorities are phased:
 
 - Version Control: Git, with the central repository hosted on GitHub.
 
-- Object Recognition: Google Gemini API (or a similar LLM with vision capabilities).
+- Environmental Analysis: Google Gemini API (or a similar LLM with vision capabilities) for navigation guidance and landmark identification.
 
 - Project Management: Linear.app
 
@@ -148,15 +149,15 @@ Phase 1: Requirements & Design (Interim Project I)
 - Goal: To define the project's scope, requirements, and user experience through detailed analysis, scenario modeling, and design mockups.
 
 - Key Activities:
-	- Analyze "AS-IS" scenarios for visually impaired individuals navigating indoors.
+	- Analyze "AS-IS" scenarios for visually impaired individuals navigating complex indoor environments.
 
-	- Develop "TO-BE" scenarios illustrating how the Everywhere Locator app will improve this experience.
+	- Develop "TO-BE" scenarios illustrating how the Everywhere Locator app will provide directional guidance and obstacle awareness.
 
-	- Create UI/UX mockups and wireframes for the application flow (the "mock-up prototype").
+	- Create UI/UX mockups and wireframes for the navigation interface flow (the "mock-up prototype").
 
-	- Draft the preliminary Workshop Requirements Specification (WRS) document.
+	- Draft the preliminary Workshop Requirements Specification (WRS) document focusing on navigation requirements.
 
-	- Develop Questionnaire I to validate assumptions and gather feedback on the proposed solution.
+	- Develop Questionnaire I to validate assumptions about directional guidance and audio feedback preferences.
 
 	- Prepare the Interim Project I presentation slides.
 
@@ -177,13 +178,13 @@ Phase 2: Prototyping & Validation (Final Project I)
 - Goal: To develop a functional, running prototype based on the requirements from Phase 1 and to establish formal traceability.
 
 - Key Activities:
-	- Implement the core UI in React Native based on the Phase 1 mockups.
+	- Implement the core navigation UI in React Native based on the Phase 1 mockups.
 
-	- Develop the "running prototype" by integrating the camera, voice input, and a basic LLM connection for object recognition.
+	- Develop the "running prototype" by integrating the camera, voice input, directional guidance algorithms, and LLM connection for environmental analysis.
 
-	- Finalize the WRS document with any learnings from the prototyping process.
+	- Finalize the WRS document with any learnings from the navigation prototyping process.
 
-	- Create the Compact and Full Forward Traceability matrices, linking requirements from the WRS to specific components in the prototype.
+	- Create the Compact and Full Forward Traceability matrices, linking navigation requirements from the WRS to specific components in the prototype.
 
 	- Calculate the requirements creeping rate.
 
