@@ -632,10 +632,6 @@ All models must be developed using RE-Tools and include:
 
 ## Appendix B: Contact Information
 
-**Project Manager/Product Owner:**
-- Duy Pham (ldp210003)
-- Email: Duy.Pham@utdallas.edu
-
 **Team Website:** https://everywhere-locator.vercel.app
 
 **GitHub Repository:** https://github.com/phamleduy04/se4351-mobile-f25
