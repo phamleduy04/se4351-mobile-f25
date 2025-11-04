@@ -3,7 +3,7 @@ import { PDFViewer } from "@/components/pdf-viewer"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Camera, Volume2, Smartphone, Presentation, Shield } from "lucide-react"
+import { Camera, Volume2, Smartphone, Presentation, FileText, Layers, HelpCircle, BookMarked, ExternalLink } from "lucide-react"
 import Image from "next/image"
 
 export default function HomePage() {
@@ -28,15 +28,6 @@ export default function HomePage() {
                 </p>
               </div>
 
-              {/* <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-lg px-8">
-                  Download App
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
-                  Learn More
-                </Button>
-              </div> */}
             </div>
 
             <div className="relative">
@@ -123,6 +114,112 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Additional Documentation Links Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Additional Documentation</h2>
+            <p className="text-xl text-muted-foreground">
+              Access our comprehensive project specifications and reports on GitHub
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {/* Interim Report */}
+            <a
+              href="https://github.com/phamleduy04/se4351-mobile-f25/blob/main/docs/Project%202/Interim%20Report.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all hover:shadow-lg"
+            >
+              <Card className="h-full hover:border-accent/50 cursor-pointer">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                    <FileText className="h-6 w-6 text-accent" />
+                  </div>
+                  <CardTitle className="flex items-center gap-2">
+                    Interim Report
+                    <ExternalLink className="h-4 w-4 opacity-60" />
+                  </CardTitle>
+                  <CardDescription>
+                    Phase II progress report with team achievements, metrics, and timeline projections
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </a>
+
+            {/* Process Specification */}
+            <a
+              href="https://github.com/phamleduy04/se4351-mobile-f25/blob/main/docs/Project%202/Process%20Specification.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all hover:shadow-lg"
+            >
+              <Card className="h-full hover:border-accent/50 cursor-pointer">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                    <Layers className="h-6 w-6 text-accent" />
+                  </div>
+                  <CardTitle className="flex items-center gap-2">
+                    Process Specification
+                    <ExternalLink className="h-4 w-4 opacity-60" />
+                  </CardTitle>
+                  <CardDescription>
+                    IDEF0 models and detailed process specifications for system implementation
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </a>
+
+            {/* Questionnaire 2 */}
+            <a
+              href="https://github.com/phamleduy04/se4351-mobile-f25/blob/main/docs/Project%202/Questionnaire%202.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all hover:shadow-lg"
+            >
+              <Card className="h-full hover:border-accent/50 cursor-pointer">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                    <HelpCircle className="h-6 w-6 text-accent" />
+                  </div>
+                  <CardTitle className="flex items-center gap-2">
+                    Questionnaire II
+                    <ExternalLink className="h-4 w-4 opacity-60" />
+                  </CardTitle>
+                  <CardDescription>
+                    User feedback survey and validation results for system requirements
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </a>
+
+            {/* WRS Project 2 */}
+            <a
+              href="https://github.com/phamleduy04/se4351-mobile-f25/blob/main/docs/Project%202/WRS%20Project%202.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all hover:shadow-lg"
+            >
+              <Card className="h-full hover:border-accent/50 cursor-pointer">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                    <BookMarked className="h-6 w-6 text-accent" />
+                  </div>
+                  <CardTitle className="flex items-center gap-2">
+                    WRS Project 2
+                    <ExternalLink className="h-4 w-4 opacity-60" />
+                  </CardTitle>
+                  <CardDescription>
+                    World, Requirements, and Specification document with formal requirement definitions
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-12 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
@@ -134,26 +231,6 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-primary-foreground/80">
-                <li>
-                  <a href="#" className="hover:text-primary-foreground transition-colors">
-                    About Project
-                  </a>
-                </li>
-                <li>
-                  <a href="/team" className="hover:text-primary-foreground transition-colors">
-                    Team
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-primary-foreground transition-colors">
-                    Documentation
-                  </a>
-                </li>
-              </ul>
-            </div>
           </div>
 
           <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-primary-foreground/60">
