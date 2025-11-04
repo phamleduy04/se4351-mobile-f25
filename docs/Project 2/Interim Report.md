@@ -2,26 +2,9 @@
 ## Everywhere Locator: A-to-B Indoor Navigation System
 
 **Report Date:** November 4, 2025  
-**Reporting Period:** Phase II Week 1-4 (October 10 - November 4, 2025)  
+**Reporting Period:** Phase II (October 10 - November 4, 2025)  
 **Project:** Everywhere Locator  
-**Team:** 10 engineers across UI/UX and Vision & Navigation teams  
 **Project Manager:** Duy Pham (ldp210003)  
-**Status:** ON TRACK for Nov 13 interim submission
-
----
-
-## Table of Contents
-
-1. [Executive Summary](#executive-summary)
-2. [Section A: What SHOULD Be Done (By Nov 13)](#section-a-what-should-be-done-by-nov-13)
-3. [Section B: What HAS Been Done](#section-b-what-has-been-done)
-4. [Section C: Blockers and Issues](#section-c-blockers-and-issues)
-5. [Section D: Next Steps](#section-d-next-steps)
-6. [Metrics and KPIs](#metrics-and-kpis)
-7. [Risk Status Update](#risk-status-update)
-8. [Timeline Projections](#timeline-projections)
-
----
 
 ## Executive Summary
 
