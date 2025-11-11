@@ -2,7 +2,8 @@
 
 Version: 2.0
 
-Date: October 28, 2025
+Date: October 28, 2025  
+Doucment URL: https://github.com/phamleduy04/se4351-mobile-f25/blob/main/docs/Project%202/Project%20Management%20Plan%202.md
 
 ## 1. Introduction
 
