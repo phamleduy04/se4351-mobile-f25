@@ -4,6 +4,7 @@
 **Date:** November 4, 2025  
 **Project:** Everywhere Locator - A-to-B Indoor Navigation for Visually Impaired Users  
 **Team URL:** https://everywhere-locator.vercel.app
+**Document URL:** https://github.com/phamleduy04/se4351-mobile-f25/blob/main/docs/Project%202/WRS%20Project%202.md
 
 ---
 
@@ -32,11 +33,6 @@ graph TB
     PRIMARY --> PRIMARY_DESC
     SECONDARY --> SECONDARY_DESC
     TERTIARY --> TERTIARY_DESC
-    
-    style FOR fill:#E57373,stroke:#333,stroke-width:3px,color:#fff
-    style PRIMARY fill:#C8E6C9
-    style SECONDARY fill:#C8E6C9
-    style PRIMARY_DESC fill:#E8F5E9
 ```
 
 ### Of: Subject
@@ -58,12 +54,6 @@ graph TB
     DOMAIN --> ENV1
     DOMAIN --> ENV2
     DOMAIN --> ENV3
-    
-    style OF fill:#81C784,stroke:#333,stroke-width:3px,color:#fff
-    style DOMAIN fill:#C8E6C9
-    style ENV1 fill:#E8F5E9
-    style ENV2 fill:#E8F5E9
-    style ENV3 fill:#E8F5E9
 ```
 
 ### By: Clients/Developers
@@ -89,11 +79,6 @@ graph TB
     INTERNAL --> INTERNAL_DESC
     EXTERNAL --> EXTERNAL_DESC
     OVERSIGHT --> OVERSIGHT_DESC
-    
-    style BY fill:#64B5F6,stroke:#333,stroke-width:3px,color:#fff
-    style INTERNAL fill:#BBDEFB
-    style EXTERNAL fill:#BBDEFB
-    style INTERNAL_DESC fill:#E3F2FD
 ```
 
 ---
@@ -131,16 +116,6 @@ graph TB
     P4 --> IMPACT4["Accidents"]
     P5 --> IMPACT5["Lost"]
     P6 --> IMPACT6["Loss of Independence"]
-    
-    style PROBLEM fill:#E57373,stroke:#333,stroke-width:3px,color:#fff
-    style P1 fill:#FFCDD2
-    style P2 fill:#FFCDD2
-    style P3 fill:#FFCDD2
-    style P4 fill:#FFCDD2
-    style P5 fill:#FFCDD2
-    style P6 fill:#FFCDD2
-    style IMPACT1 fill:#FFE0E0
-    style IMPACT6 fill:#FFE0E0
 ```
 
 ### Root Cause Analysis
@@ -193,17 +168,6 @@ graph TB
     G4 --> FUN4["FR-04: Recognize Landmarks<br/>from Video"]
     G5 --> FUN5["FR-05: Detect Obstacles<br/>in Path"]
     G6 --> FUN6["FR-06: Manage Smart Glasses<br/>Connection"]
-    
-    style GOAL fill:#4A90E2,stroke:#333,stroke-width:4px,color:#fff
-    style G1 fill:#81C784
-    style G2 fill:#81C784
-    style G3 fill:#81C784
-    style G4 fill:#81C784
-    style G5 fill:#81C784
-    style G6 fill:#81C784
-    style FUN1 fill:#C8E6C9
-    style FUN2 fill:#C8E6C9
-    style FUN3 fill:#C8E6C9
 ```
 
 ---
@@ -238,12 +202,6 @@ graph TB
     USERS --> USERS_DESC
     TECH --> TECH_DESC
     CONSTRAINTS --> CONSTRAINTS_DESC
-    
-    style DOMAIN fill:#4A90E2,stroke:#333,stroke-width:3px,color:#fff
-    style PHYSICAL fill:#81C784
-    style USERS fill:#FFB74D
-    style TECH fill:#64B5F6
-    style CONSTRAINTS fill:#E57373
 ```
 
 ---
@@ -1527,12 +1485,6 @@ graph TB
     
     UC7 -.include.-> UC1
     UC6 -.include.-> UC1
-    
-    style UC1 fill:#C8E6C9,stroke:#333,stroke-width:2px
-    style UC3 fill:#C8E6C9,stroke:#333,stroke-width:2px
-    style UC7 fill:#BBDEFB
-    style USER fill:#E57373,stroke:#333,stroke-width:3px
-    style CAREGIVER fill:#64B5F6,stroke:#333,stroke-width:2px
 ```
 
 ---
@@ -1713,13 +1665,6 @@ graph TB
     VIS_GOAL4 -.conflict.-> CARE_GOAL3
     VIS_GOAL3 -.conflict.-> VIS_GOAL2
     ORG_GOAL3 -.supports.-> CARE_GOAL3
-    
-    style VIS_GOAL1 fill:#E57373,stroke:#333,stroke-width:2px
-    style VIS_GOAL2 fill:#E57373,stroke:#333,stroke-width:2px
-    style CARE_GOAL1 fill:#64B5F6,stroke:#333,stroke-width:2px
-    style ORG_GOAL1 fill:#81C784,stroke:#333,stroke-width:2px
-    style DEV_GOAL1 fill:#FFB74D,stroke:#333,stroke-width:2px
-    style IMPL1 fill:#C8E6C9
 ```
 
 ---
@@ -1834,28 +1779,6 @@ graph TB
     A4 --> OP12["Voice-Only<br/>Navigation"]
     
     C2 --> OP13["HTTPS Encryption<br/>API Calls"]
-    
-    style ROOT fill:#4A90E2,stroke:#333,stroke-width:4px,color:#fff
-    style SAFETY fill:#E57373,stroke:#333,stroke-width:2px
-    style USABILITY fill:#81C784,stroke:#333,stroke-width:2px
-    style PERFORMANCE fill:#FFB74D,stroke:#333,stroke-width:2px
-    style RELIABILITY fill:#64B5F6,stroke:#333,stroke-width:2px
-    style ACCESSIBILITY fill:#BA68C8,stroke:#333,stroke-width:2px
-    style COMPLIANCE fill:#4DB6AC,stroke:#333,stroke-width:2px
-    
-    style S1 fill:#FFCDD2
-    style U1 fill:#E1F5FE
-    style P1 fill:#FFF3E0
-    style R1 fill:#E3F2FD
-    style A1 fill:#F3E5F5
-    style C1 fill:#E0F2F1
-    
-    style OP1 fill:#FFF9C4
-    style OP5 fill:#FFF9C4
-    style OP7 fill:#FFF9C4
-    style OP9 fill:#FFF9C4
-    style OP11 fill:#FFF9C4
-    style OP13 fill:#FFF9C4
 ```
 
 ---
@@ -2171,6 +2094,6 @@ Indoor mapping is complex and fragmented - no single source of indoor map data. 
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0 | Sep 16, 2025 | Duy Pham (ldp210003) | Initial WRS from Phase I requirements |
-| 1.1 | Sep 30, 2025 | Duy Pham (ldp210003) | Minor clarifications before Phase I submission |
-| 2.0 | Nov 4, 2025 | Duy Pham (ldp210003) | Phase II: Formal WRS with RE-Tools structure, detailed functional specifications (FR-01 through FR-06), non-functional requirements (NFR-01 through NFR-06), complete UML diagrams (Class, Use Case, Sequence), goal models (PIG, SIG), formal specifications section, comprehensive issues and resolutions documentation. **Key Update:** Maintained A-to-B navigation scope from Phase I; added smart glasses hardware integration as Phase II enhancement. |
+| 1.0 | Sep 16, 2025 | Duy Pham | Initial WRS from Phase I requirements |
+| 1.1 | Sep 30, 2025 | Duy Pham | Minor clarifications before Phase I submission |
+| 2.0 | Nov 4, 2025 | Duy Pham | Phase II: Formal WRS with RE-Tools structure, detailed functional specifications (FR-01 through FR-06), non-functional requirements (NFR-01 through NFR-06), complete UML diagrams (Class, Use Case, Sequence), goal models (PIG, SIG), formal specifications section, comprehensive issues and resolutions documentation. **Key Update:** Maintained A-to-B navigation scope from Phase I; added smart glasses hardware integration as Phase II enhancement. |
