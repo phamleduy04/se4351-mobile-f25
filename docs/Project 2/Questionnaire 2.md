@@ -1,10 +1,11 @@
 # Questionnaire II - Everywhere Locator Phase II
 ## User Feedback and Validation Study
 
-**Version:** 1.0  
+**Version:** 2.0  
 **Date:** November 2025  
 **Project:** Everywhere Locator - A-to-B Indoor Navigation System  
 **Study Purpose:** Validate Phase II prototype requirements and gather user feedback on smart glasses integration, navigation features, and system usability
+**Document URL:** https://github.com/phamleduy04/se4351-mobile-f25/blob/main/docs/Project%202/Questionnaire%202.md
 
 ---
 
