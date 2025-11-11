@@ -1493,113 +1493,184 @@ graph TB
 
 ```mermaid
 sequenceDiagram
-    actor User as Visually Impaired User
-    participant App as Mobile App
-    participant Voice as Voice Processor
-    participant Route as Route Calculator
-    participant Nav as Navigation Engine
-    participant Glasses as Smart Glasses
-    participant LLM as LLM API
-    participant Audio as Audio System
-    
-    User->>App: Launch Application
-    activate App
-    App->>App: Initialize
-    App->>Audio: Load safety disclaimer
-    activate Audio
-    Audio-->>User: Play disclaimer
-    User->>App: Acknowledge
-    deactivate Audio
-    
-    App->>Glasses: Connect via Bluetooth
-    activate Glasses
-    Glasses-->>App: Connected
-    deactivate Glasses
-    
-    App->>Audio: Ready for destination input
-    activate Audio
-    Audio-->>User: "Where do you want to go?"
-    deactivate Audio
-    
-    User->>Voice: "Take me to Meeting Room 301"
-    activate Voice
-    Voice->>Voice: Parse destination
-    Voice-->>App: Location{Room301, Floor3}
-    deactivate Voice
-    
-    App->>Route: calculateRoute(currentLocation, Room301)
-    activate Route
-    Route->>Route: Load building map
-    Route->>Route: Find optimal path
-    Route-->>App: Route{5 turns, 220 feet, 3 mins}
-    deactivate Route
-    
-    App->>Audio: Play route overview
-    activate Audio
-    Audio-->>User: "Route calculated. 5 turns, 220 feet, about 3 minutes."
-    deactivate Audio
-    
-    App->>Nav: startNavigation(route)
-    activate Nav
-    
-    loop Navigation Loop
-        Glasses->>Glasses: Capture video frame
-        Glasses-->>App: VideoFrame
-        App->>LLM: identifyLandmark(frame)
-        activate LLM
-        LLM-->>App: Landmark identified
-        deactivate LLM
-        
-        Nav->>Nav: updatePosition(landmark)
-        Nav->>Nav: getNextInstruction()
-        
-        alt Approaching Turn
-            Nav-->>App: "In 20 feet, turn right"
-            App->>Audio: playInstruction
-            activate Audio
-            Audio-->>User: "In 20 feet, turn right at the water fountain"
-            deactivate Audio
-        end
-        
-        alt At Turn Point
-            Nav-->>App: "Turn right now"
-            App->>Audio: playInstruction
-            activate Audio
-            Audio-->>User: "Turn right now. Elevator lobby ahead, 30 feet."
-            deactivate Audio
-        end
-        
-        alt Obstacle Detected
-            App->>LLM: detectObstacle(frame)
-            activate LLM
-            LLM-->>App: Obstacle ahead
-            deactivate LLM
-            App->>Audio: playWarning
-            activate Audio
-            Audio-->>User: "Caution: obstacle ahead. Move slightly left."
-            deactivate Audio
-        end
-    end
-    
-    Nav->>Nav: hasReachedDestination()
-    
-    alt Destination Reached
-        Nav-->>App: Arrival confirmed
-        App->>Audio: playArrival
-        activate Audio
-        Audio-->>User: "You have arrived at Meeting Room 301."
-        deactivate Audio
-        deactivate Nav
-    else Navigation Error
-        Nav-->>App: Error occurred
-        App->>Audio: playError
-        activate Audio
-        Audio-->>User: "Navigation error. Please try again or ask for assistance."
-        deactivate Audio
-        deactivate Nav
-    end
-    
-    deactivate App
+
+    actor User as Visually Impaired User
+
+    participant App as Mobile App
+
+    participant Voice as Voice Processor
+
+    participant Route as Route Calculator
+
+    participant Nav as Navigation Engine
+
+    participant Glasses as Smart Glasses
+
+    participant LLM as LLM API
+
+    participant Audio as Audio System
+
+    User->>App: Launch Application
+
+    activate App
+
+    App->>App: Initialize
+
+    App->>Audio: Load safety disclaimer
+
+    activate Audio
+
+    Audio-->>User: Play disclaimer
+
+    User->>App: Acknowledge
+
+    deactivate Audio
+
+    App->>Glasses: Connect via Bluetooth
+
+    activate Glasses
+
+    Glasses-->>App: Connected
+
+    deactivate Glasses
+
+    App->>Audio: Ready for destination input
+
+    activate Audio
+
+    Audio-->>User: Where do you want to go?
+
+    deactivate Audio
+
+    User->>Voice: Take me to Meeting Room 301
+
+    activate Voice
+
+    Voice->>Voice: Parse destination
+
+    Voice-->>App: Room 301, Floor 3
+
+    deactivate Voice
+
+    App->>Route: calculateRoute(currentLocation, Room301)
+
+    activate Route
+
+    Route->>Route: Load building map
+
+    Route->>Route: Find optimal path
+
+    Route-->>App: 5 turns, 220 feet, 3 mins
+
+    deactivate Route
+
+    App->>Audio: Play route overview
+
+    activate Audio
+
+    Audio-->>User: Route calculated. 5 turns, 220 feet, about 3 minutes.
+
+    deactivate Audio
+
+    App->>Nav: startNavigation(route)
+
+    activate Nav
+
+    loop Navigation Loop
+
+        Glasses->>Glasses: Capture video frame
+
+        Glasses-->>App: VideoFrame
+
+        App->>LLM: identifyLandmark(frame)
+
+        activate LLM
+
+        LLM-->>App: Landmark identified
+
+        deactivate LLM
+
+        Nav->>Nav: updatePosition(landmark)
+
+        Nav->>Nav: getNextInstruction()
+
+        alt Approaching Turn
+
+            Nav-->>App: In 20 feet, turn right
+
+            App->>Audio: playInstruction
+
+            activate Audio
+
+            Audio-->>User: In 20 feet, turn right at the water fountain
+
+            deactivate Audio
+
+        else At Turn Point
+
+            Nav-->>App: Turn right now
+
+            App->>Audio: playInstruction
+
+            activate Audio
+
+            Audio-->>User: Turn right now. Elevator lobby ahead, 30 feet.
+
+            deactivate Audio
+
+        else Obstacle Detected
+
+            App->>LLM: detectObstacle(frame)
+
+            activate LLM
+
+            LLM-->>App: Obstacle ahead
+
+            deactivate LLM
+
+            App->>Audio: playWarning
+
+            activate Audio
+
+            Audio-->>User: Caution: obstacle ahead. Move slightly left.
+
+            deactivate Audio
+
+        end
+
+    end
+
+    Nav->>Nav: hasReachedDestination()
+
+    alt Destination Reached
+
+        Nav-->>App: Arrival confirmed
+
+        App->>Audio: playArrival
+
+        activate Audio
+
+        Audio-->>User: You have arrived at Meeting Room 301.
+
+        deactivate Audio
+
+    else Navigation Error
+
+        Nav-->>App: Error occurred
+
+        App->>Audio: playError
+
+        activate Audio
+
+        Audio-->>User: Navigation error. Please try again or ask for assistance.
+
+        deactivate Audio
+
+    end
+
+    deactivate Nav
+
+    deactivate App
 ```
 
 ---
