@@ -73,13 +73,6 @@ graph TB
     
     END["Project End<br/>Dec 4, 2025"]
     PHASE2_OUTPUT --> END
-    
-    style START fill:#E8F5E9
-    style PHASE1 fill:#BBE3E6,stroke:#333,stroke-width:2px
-    style PHASE2 fill:#E6D5FF,stroke:#333,stroke-width:2px
-    style END fill:#E8F5E9
-    style PHASE1_OUTPUT fill:#C8E6C9
-    style PHASE2_OUTPUT fill:#E1BEE7
 ```
 
 ---
@@ -109,12 +102,7 @@ graph TB
     CONTROLS -.controls.-> PROCESS
     MECHANISMS -.resources.-> PROCESS
     PROCESS --> OUTPUTS
-    
-    style PROCESS fill:#4A90E2,stroke:#333,stroke-width:3px,color:#fff
-    style INPUTS fill:#C8E6C9
-    style CONTROLS fill:#FFCCBC
-    style MECHANISMS fill:#BBDEFB
-    style OUTPUTS fill:#F8BBD0
+
 ```
 
 ---
@@ -172,21 +160,6 @@ graph TB
         A2_6 --> A2_7
         A2_7 --> PHASE2_PASS
         
-        style A1_1 fill:#E1F5FE
-        style A1_2 fill:#E1F5FE
-        style A1_3 fill:#E1F5FE
-        style A1_4 fill:#E1F5FE
-        style A1_5 fill:#E1F5FE
-        style PHASE1_PASS fill:#B3E5FC,stroke:#333,stroke-width:2px
-        
-        style A2_1 fill:#F3E5F5
-        style A2_2 fill:#F3E5F5
-        style A2_3 fill:#F3E5F5
-        style A2_4 fill:#F3E5F5
-        style A2_5 fill:#F3E5F5
-        style A2_6 fill:#F3E5F5
-        style A2_7 fill:#F3E5F5
-        style PHASE2_PASS fill:#E1BEE7,stroke:#333,stroke-width:2px
     end
 ```
 
@@ -256,30 +229,7 @@ graph TB
         ACT2 --> O2
         ACT4 --> O1
         ACT5 --> O4
-        
-        style I1 fill:#C8E6C9
-        style I2 fill:#C8E6C9
-        style I3 fill:#C8E6C9
-        
-        style ACT1 fill:#E1F5FE
-        style ACT2 fill:#E1F5FE
-        style ACT3 fill:#E1F5FE
-        style ACT4 fill:#E1F5FE
-        style ACT5 fill:#E1F5FE
-        
-        style C1 fill:#FFCCBC
-        style C2 fill:#FFCCBC
-        style C3 fill:#FFCCBC
-        
-        style M1 fill:#BBDEFB
-        style M2 fill:#BBDEFB
-        style M3 fill:#BBDEFB
-        style M4 fill:#BBDEFB
-        
-        style O1 fill:#F8BBD0
-        style O2 fill:#F8BBD0
-        style O3 fill:#F8BBD0
-        style O4 fill:#F8BBD0
+
     end
 ```
 
@@ -370,39 +320,7 @@ graph TB
         M4 -.resources.-> ACT5
         M5 -.resources.-> ACT5
         M6 -.resources.-> ACT6
-        
-        style I1 fill:#C8E6C9
-        style I2 fill:#C8E6C9
-        style I3 fill:#C8E6C9
-        
-        style ACT1 fill:#F3E5F5
-        style ACT2 fill:#F3E5F5
-        style ACT3 fill:#F3E5F5
-        style ACT4 fill:#F3E5F5
-        style ACT5 fill:#F3E5F5
-        style ACT6 fill:#F3E5F5
-        
-        style C1 fill:#FFCCBC
-        style C2 fill:#FFCCBC
-        style C3 fill:#FFCCBC
-        style C4 fill:#FFCCBC
-        style C5 fill:#FFCCBC
-        
-        style M1 fill:#BBDEFB
-        style M2 fill:#BBDEFB
-        style M3 fill:#BBDEFB
-        style M4 fill:#BBDEFB
-        style M5 fill:#BBDEFB
-        style M6 fill:#BBDEFB
-        
-        style O1 fill:#E1BEE7
-        style O2 fill:#E1BEE7
-        style O3 fill:#E1BEE7
-        style O4 fill:#E1BEE7
-        style O5 fill:#E1BEE7
-        style O6 fill:#E1BEE7
-        style O7 fill:#E1BEE7
-        style O8 fill:#E1BEE7
+      
     end
 ```
 
@@ -459,25 +377,6 @@ graph TB
     L2_2_2 --> R5
     L2_3_1 --> R6
     L2_3_2 --> R7
-    
-    style ROOT fill:#4A90E2,stroke:#333,stroke-width:3px,color:#fff
-    style L1_1 fill:#E57373,stroke:#333,stroke-width:2px
-    style L1_2 fill:#81C784,stroke:#333,stroke-width:2px
-    style L1_3 fill:#FFB74D,stroke:#333,stroke-width:2px
-    style L2_1_1 fill:#FFCDD2
-    style L2_1_2 fill:#FFCDD2
-    style L2_1_3 fill:#FFCDD2
-    style L2_2_1 fill:#C8E6C9
-    style L2_2_2 fill:#C8E6C9
-    style L2_3_1 fill:#FFF3E0
-    style L2_3_2 fill:#FFF3E0
-    style R1 fill:#F8BBD0
-    style R2 fill:#F8BBD0
-    style R3 fill:#F8BBD0
-    style R4 fill:#F8BBD0
-    style R5 fill:#F8BBD0
-    style R6 fill:#F8BBD0
-    style R7 fill:#F8BBD0
 ```
 
 ---
@@ -537,17 +436,6 @@ graph TB
     CONFLICT["Conflict:<br/>Performance vs<br/>Accuracy"]
     
     SG_P1 -.conflict.-> SG_S1
-    
-    style SG_SAFETY fill:#E57373,stroke:#333,stroke-width:2px,color:#fff
-    style SG_USABILITY fill:#81C784,stroke:#333,stroke-width:2px,color:#fff
-    style SG_PERFORMANCE fill:#FFB74D,stroke:#333,stroke-width:2px,color:#fff
-    style SG_S1 fill:#FFCDD2
-    style SG_U1 fill:#C8E6C9
-    style SG_P1 fill:#FFF3E0
-    style TASK_S1 fill:#FFF9C4
-    style TASK_U1 fill:#FFF9C4
-    style TASK_P1 fill:#FFF9C4
-    style CONFLICT fill:#FF6B6B,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 ---
@@ -591,17 +479,6 @@ graph TB
     UIUX_LEAD --> UIUX_RESPONSIBILITIES
     VIS_LEAD --> VIS_RESPONSIBILITIES
     QA --> QA_RESPONSIBILITIES
-    
-    style PM fill:#4A90E2,stroke:#333,stroke-width:2px,color:#fff
-    style UIUX_LEAD fill:#81C784,stroke:#333,stroke-width:2px,color:#fff
-    style VIS_LEAD fill:#FFB74D,stroke:#333,stroke-width:2px,color:#fff
-    style QA fill:#E57373,stroke:#333,stroke-width:2px,color:#fff
-    style UIUX_DEVS fill:#C8E6C9
-    style VIS_DEVS fill:#FFF3E0
-    style PM_RESPONSIBILITIES fill:#E3F2FD
-    style UIUX_RESPONSIBILITIES fill:#E8F5E9
-    style VIS_RESPONSIBILITIES fill:#FFF9C4
-    style QA_RESPONSIBILITIES fill:#FFEBEE
 ```
 
 ---
@@ -1047,30 +924,6 @@ graph LR
     P2_PROCESS --> P2_OUT8
     P2_PROCESS --> P2_OUT9
     P2_PROCESS --> P2_OUT10
-    
-    style P1_OUT1 fill:#BBDEFB
-    style P1_OUT2 fill:#BBDEFB
-    style P1_OUT3 fill:#BBDEFB
-    style P1_OUT4 fill:#BBDEFB
-    style P1_OUT5 fill:#BBDEFB
-    
-    style P2_PROCESS fill:#4A90E2,stroke:#333,stroke-width:2px,color:#fff
-    
-    style P2_IN1 fill:#E1F5FE
-    style P2_IN2 fill:#E1F5FE
-    style P2_IN3 fill:#E1F5FE
-    style P2_IN4 fill:#E1F5FE
-    
-    style P2_OUT1 fill:#F8BBD0
-    style P2_OUT2 fill:#F8BBD0
-    style P2_OUT3 fill:#F8BBD0
-    style P2_OUT4 fill:#F8BBD0
-    style P2_OUT5 fill:#F8BBD0
-    style P2_OUT6 fill:#F8BBD0
-    style P2_OUT7 fill:#F8BBD0
-    style P2_OUT8 fill:#F8BBD0
-    style P2_OUT9 fill:#F8BBD0
-    style P2_OUT10 fill:#F8BBD0
 ```
 
 ---
