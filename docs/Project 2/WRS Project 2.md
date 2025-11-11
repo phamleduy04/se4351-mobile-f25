@@ -74,7 +74,7 @@ graph TB
     
     EXTERNAL_DESC["Google Gemini API provider<br/>Seeed Studio - Hardware provider<br/>Map data service providers<br/>Device OS providers - Apple, Google"]
     
-    OVERSIGHT_DESC["Course Instructor - UTDallas SE 4351<br/>Academic Institution - UTDallas<br/>TA and Academic Support Staff"]
+    OVERSIGHT_DESC["Course Instructor - Professor Chung<br/>TA"]
     
     INTERNAL --> INTERNAL_DESC
     EXTERNAL --> EXTERNAL_DESC
