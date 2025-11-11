@@ -3,7 +3,7 @@
 **Version:** 2.0  
 **Date:** November 4, 2025  
 **Project:** Everywhere Locator - A-to-B Indoor Navigation for Visually Impaired Users  
-**Team URL:** https://everywhere-locator.vercel.app
+**Team URL:** https://everywhere-locator.vercel.app  
 **Document URL:** https://github.com/phamleduy04/se4351-mobile-f25/blob/main/docs/Project%202/WRS%20Project%202.md
 
 ---
