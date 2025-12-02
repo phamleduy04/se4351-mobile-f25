@@ -97,7 +97,7 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <Button asChild size="lg">
               <a
-                href="https://www.canva.com/design/DAG0pos5qJE/qLda8EWfuW7ICUzxSwUmHQ/edit?utm_content=DAG0pos5qJE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                href="https://www.canva.com/design/DAG6ZvxHk3k/K3RimAAqS1saKYxsdCIwNw/edit?utm_content=DAG6ZvxHk3k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
                 target="_blank"
                 rel="noopener noreferrer"
               >
