@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Camera, Volume2, Smartphone, Presentation, FileText, Layers, HelpCircle, BookMarked, ExternalLink } from "lucide-react"
-import Image from "next/image"
 
 export default function HomePage() {
   return (
@@ -31,13 +30,17 @@ export default function HomePage() {
             </div>
 
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-accent/20 to-secondary/20 border border-border overflow-hidden">
-                <Image
-                  src="/modern-product-showcase-dashboard-interface.png"
-                  alt="Everywhere Locator App Interface"
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover"
+              <div className="aspect-video rounded-2xl bg-gradient-to-br from-accent/20 to-secondary/20 border border-border overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/4RgM6nkSn9A"
+                  title="Everywhere Locator - SE4351 Demo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="w-full h-full"
                 />
               </div>
             </div>
@@ -92,9 +95,15 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button disabled size="lg" className="opacity-50 cursor-not-allowed">
-              <Presentation className="mr-2 h-5 w-5" />
-              View Project Presentation (Coming Soon)
+            <Button asChild size="lg">
+              <a
+                href="https://www.canva.com/design/DAG0pos5qJE/qLda8EWfuW7ICUzxSwUmHQ/edit?utm_content=DAG0pos5qJE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Presentation className="mr-2 h-5 w-5" />
+                Project Presentation
+              </a>
             </Button>
           </div>
         </div>
