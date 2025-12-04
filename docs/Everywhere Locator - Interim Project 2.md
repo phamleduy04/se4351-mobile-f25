@@ -1,4 +1,5 @@
 
+**Team**: 1
 **Date:** December 4, 2025
 **Project:** Everywhere Locator - A-to-B Indoor Navigation for Visually Impaired Users
 **Team URL:** https://everywhere-locator.vercel.app
